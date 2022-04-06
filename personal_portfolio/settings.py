@@ -129,3 +129,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("Looks lik eno local file. You must be on production")
