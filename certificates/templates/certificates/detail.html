@@ -1,0 +1,15 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center mt-5" id="blogdetailtitle">{{ certificates.title }}</h1>
+
+<a href="{{ certificates.url }}">
+    <img src="{{ certificates.image.url }}" class="img-fluid mb-2">
+  </a>
+
+{{ blog.description|safe }}
+
+{% endblock %}
